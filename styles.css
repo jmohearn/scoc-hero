@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url("img/scoc-anchor.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-nav {
+  height: 12%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6vw;
+}
+
+.header-nav a {
+  height: 3.5vw;
+  cursor: pointer;
+}
+
+.header-nav--logo {
+  height: 100%;
+}
+
+.nav-links {
+  width: 50vw;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: regular;
+  cursor: pointer;
+}
+
+.header-content {
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translate(-50%, 50%);
+  color: #fff;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: moveInMessage 3s;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
+
+.welcome-message h1 {
+  letter-spacing: 1rem;
+}
+
+.theme-message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: expand 5s;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  font-family: "Prata", serif;
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Prata", serif;
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.5rem;
+  font-size: 2vw;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+@keyframes moveInMessage {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 1rem;
+  }
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+    letter-spacing: 0;
+  }
+  75% {
+    opacity: 1;
+    letter-spacing: 2rem;
+  }
+
+  90% {
+    opacity: 0;
+    letter-spacing: 2rem;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.scroll-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  height: 2rem;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  animation: appear 5s;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
+
+.darrow {
+  font-size: 0.75rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
